@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon6de69e97b1ec29210514.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32d1e1c29bcac845c836e1.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16d8101facfa71307594d6.png">
+  <link rel="mask-icon" href="./assets/safari-pinned-tab612e33411dc6f757238a.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>TwoSet Escape Room: Violin</title>
+  <script src="https://use.fontawesome.com/1872bda518.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&amp;family=Press+Start+2P&amp;family=ZCOOL+QingKe+HuangYou&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/b88d04fba731603756b1.css" />
+  <script defer="defer" src="./js/violin4f787907d3a206f095a6.js"></script>
+  <link rel="stylesheet" href="./css/violin.05e5e9672010341beb5e.css" />
+</head>
+
+<body>
+  <div class="loader" id="loader">
+    <div class="progress" id="progressHolder">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  <div class="hidden-desktop">
+    <div class="rotateme"></div>
+  </div>
+  <audio id="beethoven5"></audio>
+  <audio src="./audios/snare-hit7023f5f96bb7515448d3.m4a" id="snareHit"></audio>
+  <audio src="./audios/ding8fd7bb55f337fda05846.mp3" id="ding"></audio>
+  <audio src="./audios/tuningf38f4727411113bbb094.mp3" id="tuningAudio"></audio>
+  <audio src="./audios/beep 551568b2bf7ee65f77db5.mp3" id="wrongCode"></audio>
+  <audio src="./audios/beep32719fe5f9364d813abea.mp3" id="beep"></audio>
+  <audio src="./audios/beep42ed5cae73793b25f9948.mp3" id="safeBeep"></audio>
+  <audio src="./audios/safe-open95a1ffbfca5fcff83147.mp3" id="safeOpen"></audio>
+  <audio src="./audios/pag24ba0e1694b968bdbb511b.mp3" id="finalPerformanceAudio"></audio>
+  <audio src="./audios/dooropen22ea353976b26571fe806.mp3" id="startSound"></audio>
+  <audio src="./audios/flute-draft5a9287bfde524ef65119.m4a" id="fluteAudio"></audio>
+  <audio src="./audios/harp-draftb0767e28631c7f07b7c4.m4a" id="harpAudio"></audio>
+  <audio src="./audios/violin-draft08cc730565d6f2ee34fe.m4a" id="violinAudio"></audio>
+  <audio src="./audios/trumpet-draft7d2dec88739f38945d41.m4a" id="trumpetAudio"></audio>
+  <audio src="./audios/clarinet-draft63850f8b83ce6458ad10.m4a" id="clarinetAudio"></audio>
+  <audio src="./audios/f554be42e92f198f1f055b.mp3" id="violin-f5"></audio>
+  <audio src="./audios/asharp43fb7978433e8eeee58cf.mp3" id="violin-aSharp4"></audio>
+  <audio src="./audios/dsharp4c12d32b3bb5fd44a3934.mp3" id="violin-dSharp4"></audio>
+  <audio src="./audios/gsharp375bd816f6787f3dfd28f.mp3" id="violin-gSharp3"></audio>
+  <audio src="./audios/fsharp58314e6796bd009027705.mp3" id="violin-fSharp5"></audio>
+  <audio src="./audios/b403b3a8dd5b80596556a9.mp3" id="violin-b4"></audio>
+  <audio src="./audios/e4163a0dc261ceaeca650b.mp3" id="violin-e4"></audio>
+  <audio src="./audios/a3a57d6c09e3baa4436832.mp3" id="violin-a3"></audio>
+  <audio src="./audios/g5c64490dda64aaf21218a.mp3" id="violin-g5"></audio>
+  <audio src="./audios/c5d9808e6fb5b80b5435ec.mp3" id="violin-c5"></audio>
+  <audio src="./audios/f47c1623b6e3fbc13e0026.mp3" id="violin-f4"></audio>
+  <audio src="./audios/asharp32f31ebf4a24c020ab39a.mp3" id="violin-aSharp3"></audio>
+  <audio src="./audios/gsharp54f2fef2eb7e1d2caa83c.mp3" id="violin-gSharp5"></audio>
+  <audio src="./audios/csharp57fd59f6d0cbfacad51dc.mp3" id="violin-cSharp5"></audio>
+  <audio src="./audios/fsharp4c994aa0d5d474a188175.mp3" id="violin-fSharp4"></audio>
+  <audio src="./audios/b3ae5fc93b029518ebfd84.mp3" id="violin-b3"></audio>
+  <audio src="./audios/a5cf4abf63b6e5f0af6180.mp3" id="violin-a5"></audio>
+  <audio src="./audios/d5116bdc252a91f4f03eee.mp3" id="violin-d5"></audio>
+  <audio src="./audios/g4a7a90b1b3a378daba831.mp3" id="violin-g4"></audio>
+  <audio src="./audios/c40b2c4cd48186f510549b.mp3" id="violin-c4"></audio>
+  <audio src="./audios/asharp5a3ceb905ac289cdcd4d5.mp3" id="violin-aSharp5"></audio>
+  <audio src="./audios/dsharp51606fabccd2d6b98ff03.mp3" id="violin-dSharp5"></audio>
+  <audio src="./audios/gsharp4f8e309cf72775fae8b71.mp3" id="violin-gSharp4"></audio>
+  <audio src="./audios/csharp44750accd404b7a01e7a4.mp3" id="violin-cSharp4"></audio>
+  <audio src="./audios/b53f2f6c77f3594d9a66cd.mp3" id="violin-b5"></audio>
+  <audio src="./audios/e513a4c9aac9be3eab63c2.mp3" id="violin-e5"></audio>
+  <audio src="./audios/a4b6aab4e44c1d6a2fc257.mp3" id="violin-a4"></audio>
+  <audio src="./audios/d423bfd4e8ea0fa0693494.mp3" id="violin-d4"></audio>
+  <div onclick="">
+    <div class="stage" id="stage">
+      <div id="intro" class="intro">
+        <div id="start" class="start"></div>
+      </div>
+      <div id="dialogue" class="dialogue animate-show-dialogue">
+        <div id="tuning-dialogue" class="tuning-dialogue"></div>
+        <div id="strange-sound-dialogue" class="strange-sound-dialogue"></div>
+        <div class="paganini-dialogue" id="paganiniDialogue"></div>
+        <div class="already-in-tune" id="alreadyInTune"></div>
+        <div class="found-manuscript" id="foundManuscript"></div>
+        <div class="found-journal" id="foundJournal"></div>
+        <div class="dialogue-triangle animate-show-dialogue" id="dialogueTriangle"></div>
+        <div class="paganini-triangle animate-show-dialogue" id="paganiniTriangle"></div>
+      </div>
+      <div id="modal" class="modal"><button id="closeModal" class="closeModal"><span>&times;</span></button>
+        <div id="choice" class="choice">
+          <div class="rowContainer"><button class="fontResize" id="practiceButton">Practice</button> <button
+              class="fontResize" id="performButton">Perform</button> <button class="fontResize"
+              id="escapeButton">Escape</button></div>
+        </div>
+        <div class="notebook-modal" id="notebookModal"></div>
+        <div class="escape" id="escape">
+          <div class="escape-message fontResize" id="escapeMessage">The door is locked. Enter the password to unlock:
+          </div>
+          <div class="escape-numpad-image"></div>
+          <div class="escape-numpad" id="escapeNumpad">
+            <div class="escapeNumpadRow1">
+              <div id="escapeNumpad1"></div>
+              <div id="escapeNumpad2"></div>
+              <div id="escapeNumpad3"></div>
+            </div>
+            <div class="escapeNumpadRow2">
+              <div id="escapeNumpad4"></div>
+              <div id="escapeNumpad5"></div>
+              <div id="escapeNumpad6"></div>
+            </div>
+            <div class="escapeNumpadRow3">
+              <div id="escapeNumpad7"></div>
+              <div id="escapeNumpad8"></div>
+              <div id="escapeNumpad9"></div>
+            </div>
+            <div class="escapeNumpadRow4">
+              <div id="escapeNumpadC"></div>
+              <div id="escapeNumpad0"></div>
+              <div id="escapeNumpadOk"></div>
+            </div>
+          </div>
+          <div class="escape-display" id="escapeDisplay"></div>
+        </div>
+        <div id="perform" class="perform">
+          <div id="manuscript1" class="manuscript1"></div>
+          <div id="manuscript2" class="manuscript2"></div>
+          <div id="manuscript3" class="manuscript3"></div>
+          <div id="manuscript4" class="manuscript4"></div>
+          <div class="paganini-dialogue-transparent" id="paganiniDialogueTransparent"></div>
+          <p id="nothing" class="nothing">You have nothing to perform</p>
+          <button id="performPlay" class="performPlay fontResize">Play</button>
+        </div>
+        <div class="practice" id="practice">
+          <div class="violinNote gSharp3" id="gSharp3"></div>
+          <div class="violinNote a3" id="a3"></div>
+          <div class="violinNote aSharp3" id="aSharp3"></div>
+          <div class="violinNote b3" id="b3"></div>
+          <div class="violinNote c4" id="c4"></div>
+          <div class="violinNote cSharp4" id="cSharp4"></div>
+          <div class="violinNote d4" id="d4"></div>
+          <div class="violinNote dSharp4" id="dSharp4"></div>
+          <div class="violinNote e4" id="e4"></div>
+          <div class="violinNote f4" id="f4"></div>
+          <div class="violinNote fSharp4" id="fSharp4"></div>
+          <div class="violinNote g4" id="g4"></div>
+          <div class="violinNote gSharp4" id="gSharp4"></div>
+          <div class="violinNote a4" id="a4"></div>
+          <div class="violinNote aSharp4" id="aSharp4"></div>
+          <div class="violinNote b4" id="b4"></div>
+          <div class="violinNote c5" id="c5"></div>
+          <div class="violinNote cSharp5" id="cSharp5"></div>
+          <div class="violinNote d5" id="d5"></div>
+          <div class="violinNote dSharp5" id="dSharp5"></div>
+          <div class="violinNote e5" id="e5"></div>
+          <div class="violinNote f5" id="f5"></div>
+          <div class="violinNote fSharp5" id="fSharp5"></div>
+          <div class="violinNote g5" id="g5"></div>
+          <div class="violinNote gSharp5" id="gSharp5"></div>
+          <div class="violinNote a5" id="a5"></div>
+          <div class="violinNote aSharp5" id="aSharp5"></div>
+          <div class="violinNote b5" id="b5"></div>
+        </div>
+      </div>
+      <div class="level1" id="level1">
+        <div class="clock fontResize" id="clock">60:00</div>
+        <div id="violin" class="violin"></div>
+        <div class="blackboard"></div>
+        <div class="drum" id="snareDrum">
+          <div class="drum-hit-area" id="drumHitArea"></div>
+        </div>
+        <div id="mirrorQuestion" class="mirror-question animate-show-dialogue"></div>
+        <div id="closedSafe" class="safe closed">
+          <div id="safeDisplay" class="safeDisplay fontResize"></div>
+          <div id="safeNumpad" class="safeNumpad">
+            <div class="SafeButtonRow1">
+              <div id="safeButton1"></div>
+              <div id="safeButton2"></div>
+              <div id="safeButton3"></div>
+            </div>
+            <div class="SafeButtonRow2">
+              <div id="safeButton4"></div>
+              <div id="safeButton5"></div>
+              <div id="safeButton6"></div>
+            </div>
+            <div class="SafeButtonRow3">
+              <div id="safeButton7"></div>
+              <div id="safeButton8"></div>
+              <div id="safeButton9"></div>
+            </div>
+            <div class="SafeButtonRow4">
+              <div id="safeButtonC"></div>
+              <div id="safeButton0"></div>
+              <div id="safeButtonOk"></div>
+            </div>
+          </div>
+        </div>
+        <div class="random" style="display:block"></div>
+        <div id="openSafe" class="safe open"></div>
+        <div class="channelUp-button" id="channelUpButton"></div>
+        <div class="channelDown-button" id="channelDownButton"></div>
+        <div class="tv-screen" id="tvScreen">
+          <div class="conductor" id="conductor"></div>
+          <div class="circle-of-fifths" id="circleOfFifths"></div>
+        </div>
+        <div id="audio-player-display" class="audio-player-display fontResize">Track 01</div>
+        <div id="audio-player-buttons" class="audio-player-buttons">
+          <div id="back-button" class="back-button"></div>
+          <div id="play-button" class="play-button"></div>
+          <div id="stop-button" class="stop-button"></div>
+          <div id="next-button" class="next-button"></div>
+        </div>
+        <div id="on-air-off" class="neon-lights on-air off"></div>
+        <div id="on-air-on" class="neon-lights on-air on"></div>
+        <div id="rec-off" class="neon-lights rec off"></div>
+        <div id="rec-on" class="neon-lights rec on"></div>
+        <div id="tunerDisplay" class="tuner-display fontResize">A=440.0Hz</div>
+        <div id="tunerButtons" class="tuner-buttons">
+          <div id="tune-up" class="tune-up"></div>
+          <div id="tune-down" class="tune-down"></div>
+          <div id="tune" class="tune"></div>
+        </div>
+        <div class="journal-clickable" id="notebook"></div>
+        <div class="journal animate-show-dialogue" id="journal"></div>
+      </div>
+      <div class="level0" id="level0">
+        <div class="room" id="room"></div>
+      </div>
+    </div>
+  </div>
+  <div class="end-screen" id="endScreen">
+    <div class="video" id="video">
+      <img class="photo-frame" id="photoFrame" src="./assets/photobooth-036c4f041562060bd017a3.png" alt="" crossorigin="anonymous">
+      <div class="video-circle" id="videoCircle">
+        <div class="countdown" id="countdown"></div><video class="video-view" id="videoView"
+          crossorigin="anonymous"></video><canvas id="canvas"></canvas>
+        <div class="output" id="photoOutput"></div>
+      </div>
+    </div>
+    <div class="violin-end-bg" id="endBg"></div>
+    <div class="end-message" id="endMessage"></div>
+    <button class="take-photo" id="takePhoto">Take photo!</button>
+    <button class="take-photo" id="retakePhoto" style="display:none">Retake photo</button>
+    <div class="socials" id="socials">
+      <a id="shareFacebook" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a id="shareTwitter" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a id="downloadPhoto" download="twoset-escape.png">
+        <i class="fas fa-download"></i>
+      </a>
+    </div>
+  </div>
+  <script src="./js/site.js">
+  </script>
+</body>
+
+</html>
+
+<!--
+  THIS FILE IS A RECONSTRUCTION OF A FILE THAT HAS BEEN ARCHIVED ON THE WAYBACK MACHINE.
+  IT HAS MODIFICATIONS PLACED TO ENSURE THAT IT MAINTAINS FUNCTIONAL.
+-->

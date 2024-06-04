@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=TYoruszc" charset="utf-8"></script>
+    <script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=txqj7nKC"  charset="utf-8"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon6de69e97b1ec29210514.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32d1e1c29bcac845c836e1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16d8101facfa71307594d6.png">
+    <link rel="mask-icon" href="./assets/safari-pinned-tab612e33411dc6f757238a.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>TwoSet Escape Room: Piano</title>
+    <script src="https://use.fontawesome.com/1872bda518.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&amp;family=Press+Start+2P&amp;family=ZCOOL+QingKe+HuangYou&amp;display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0SW86EE9R"></script>
+    <script defer="defer" src="js/piano172062aecdae36165157.js"></script>
+    <link href="css/piano.d6c9ed9f470959780fbc.css" rel="stylesheet" />
+  </head>
+  <body>
+  <div class="loader" id="loader">
+    <div class="progress" id="progressHolder">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  <div class="hidden-desktop">
+    <div class="rotateme"></div>
+  </div>
+  <audio src="./audios/beep 551568b2bf7ee65f77db5.mp3" id="wrongCode"></audio>
+  <audio src="./audios/winning26cd1ae7021dc6c8692d7.wav" id="pokerWinningSound"></audio>
+  <audio src="./audios/wrongbuzzere467c76f3e9966dfcb42.mp3" id="pokerWrongSound"></audio>
+  <audio src="./audios/beep42ed5cae73793b25f9948.mp3" id="safeBeep"></audio>
+  <audio src="./audios/ding8fd7bb55f337fda05846.mp3" id="ding"></audio>
+  <audio src="./audios/la-campanella98cf89b444faa1069725.mp3" id="finalPerformanceAudio"></audio>
+  <audio src="./audios/dooropen22ea353976b26571fe806.mp3" id="startSound"></audio>
+  <audio src="./audios/metronome-click-2c5b1b263808b95aed5d3.mp3" id="metronomeClick"></audio>
+  <audio src="./audios/c69e354bf4df4eb6642a5.mp3" id="audio-c"></audio>
+  <audio src="./audios/csharp5c9f9611029ae3605824.mp3" id="audio-cSharp"></audio>
+  <audio src="./audios/d34cdff765412cbcd70e7.mp3" id="audio-d"></audio>
+  <audio src="./audios/dsharpb0a48f647f276ec6368d.mp3" id="audio-dSharp"></audio>
+  <audio src="./audios/e9725367498a378f27f4e.mp3" id="audio-e"></audio>
+  <audio src="./audios/fb580c4e3ef21e1f3793f.mp3" id="audio-f"></audio>
+  <audio src="./audios/fsharp2c8b8f107b33e056b721.mp3" id="audio-fSharp"></audio>
+  <audio src="./audios/g369a41b06686d68c06d2.mp3" id="audio-g"></audio>
+  <audio src="./audios/gsharp3885aed2ca2b182f6136.mp3" id="audio-gSharp"></audio>
+  <audio src="./audios/a540a84d93252d81f85f3.mp3" id="audio-a"></audio>
+  <audio src="./audios/asharpc5bcbc918ea351975ed3.mp3" id="audio-aSharp"></audio>
+  <audio src="./audios/baebf2caf63a47b9df55e.mp3" id="audio-b"></audio>
+  <div onclick="">
+    <div class="stage" id="stage">
+      <div id="intro" class="intro">
+        <div id="start" class="start"></div>
+      </div>
+      <div id="dialogue" class="dialogue animate-show-dialogue">
+        <div class="found-manuscript" id="foundManuscript"></div>
+        <div class="found-envelope-dialogue" id="foundEnvelopeDialogue"></div>
+        <div class="paganini-dialogue animate-show-dialogue" id="paganiniDialogue"></div>
+        <div class="dialogue-triangle animate-show-dialogue" id="dialogueTriangle"></div>
+        <div class="paganini-triangle animate-show-dialogue" id="paganiniTriangle"></div>
+      </div>
+      <div id="modal" class="modal">
+        <button id="closeModal" class="closeModal">
+          <span>&times;</span>
+        </button>
+        <div id="choice" class="choice">
+          <div class="rowContainer">
+            <button class="fontResize" id="practiceButton">Practice</button>
+            <button class="fontResize" id="performButton">Perform</button>
+          <button class="fontResize" id="escapeButton">Escape</button>
+          </div>
+        </div>
+        <div class="practice" id="practice">
+          <div class="piano-keys" id="pianoKeys">
+            <div class="c whitekey" id="c"></div>
+            <div class="cSharp blackkey" id="cSharp"></div>
+            <div class="d whitekey" id="d"></div>
+            <div class="dSharp blackkey" id="dSharp"></div>
+            <div class="e whitekey" id="e"></div>
+            <div class="f whitekey" id="f"></div>
+            <div class="fSharp blackkey" id="fSharp"></div>
+            <div class="g whitekey" id="g"></div>
+            <div class="gSharp blackkey" id="gSharp"></div>
+            <div class="a whitekey" id="a"></div>
+            <div class="aSharp blackkey" id="aSharp"></div>
+            <div class="b whitekey" id="b"></div>
+          </div>
+          <div class="tuner" id="tuner">
+            <div class="tunerDisplay fontResize" id="tunerDisplay"></div>
+            <div class="tunerLight" id="tunerLight"></div>
+          </div>
+        </div>
+        <div class="perform" id="perform">
+          <div id="manuscript1" class="manuscript1"></div>
+          <div id="manuscript2" class="manuscript2"></div>
+          <div id="manuscript3" class="manuscript3"></div>
+          <div id="manuscript4" class="manuscript4"></div>
+          <div class="paganini-dialogue-transparent" id="paganiniDialogueTransparent"></div>
+          <p id="nothing" class="nothing">You have nothing to perform</p><button id="performPlay"
+            class="performPlay">Play</button>
+        </div>
+        <div class="escape" id="escape">
+          <div class="escape-message fontResize" id="escapeMessage">The door is locked. Enter the password to unlock:
+          </div>
+          <div class="escape-numpad-image"></div>
+          <div class="escape-numpad" id="escapeNumpad">
+            <div class="escapeNumpadRow1">
+              <div id="escapeNumpad1"></div>
+              <div id="escapeNumpad2"></div>
+              <div id="escapeNumpad3"></div>
+            </div>
+            <div class="escapeNumpadRow2">
+              <div id="escapeNumpad4"></div>
+              <div id="escapeNumpad5"></div>
+              <div id="escapeNumpad6"></div>
+            </div>
+            <div class="escapeNumpadRow3">
+              <div id="escapeNumpad7"></div>
+              <div id="escapeNumpad8"></div>
+              <div id="escapeNumpad9"></div>
+            </div>
+            <div class="escapeNumpadRow4">
+              <div id="escapeNumpadC"></div>
+              <div id="escapeNumpad0"></div>
+              <div id="escapeNumpadOk"></div>
+            </div>
+          </div>
+          <div class="escape-display" id="escapeDisplay"></div>
+        </div>
+        <div class="letter-modal" id="letterModal"></div>
+      </div>
+      <div class="level1" id="level1">
+        <div class="clock fontResize" id="clock">60:00</div>
+        <div id="piano" class="piano"></div>
+        <div class="metronomeDisplay fontResize" id="metronomeDisplay"></div>
+        <div class="metronomeButtons" id="metronomeButtons">
+          <div class="metronomeStart" id="metronomeStart"></div>
+          <div class="metronomeUp" id="metronomeUp"></div>
+          <div class="metronomeDown" id="metronomeDown"></div>
+        </div>
+        <div class="metronomeLight" id="metronomeLight"></div>
+        <div class="hidden-button" id="hiddenButton"></div>
+        <div class="hidden-envelope animate-show-dialogue" id="hiddenEnvelope"></div>
+        <div class="pokerScreen" id="pokerScreen">
+          <div class="pokerPanel col1" id="pokerPanel1">
+            <div class="instruments animate-show-dialogue" id="instruments1"></div>
+            <div class="rhythmClue animate-show-dialogue triplet"></div>
+          </div>
+          <div class="pokerPanel col2" id="pokerPanel2">
+            <div class="instruments animate-show-dialogue" id="instruments2"></div>
+            <div class="rhythmClue animate-show-dialogue crotchet"></div>
+          </div>
+          <div class="pokerPanel col3" id="pokerPanel3">
+            <div class="instruments animate-show-dialogue" id="instruments3"></div>
+            <div class="rhythmClue animate-show-dialogue crotchet"></div>
+          </div>
+          <div class="pokerPanel col4" id="pokerPanel4">
+            <div class="instruments animate-show-dialogue" id="instruments4"></div>
+            <div class="rhythmClue animate-show-dialogue quaver"></div>
+          </div>
+          <div class="pokerPanel col5" id="pokerPanel5">
+            <div class="instruments animate-show-dialogue" id="instruments5"></div>
+            <div class="rhythmClue animate-show-dialogue crotchet"></div>
+          </div>
+        </div>
+        <div class="pokerScrollButtons" id="pokerScrollButtons">
+          <div class="pokerScroll col1" id="pokerScroll1"></div>
+          <div class="pokerScroll col2" id="pokerScroll2"></div>
+          <div class="pokerScroll col3" id="pokerScroll3"></div>
+          <div class="pokerScroll col4" id="pokerScroll4"></div>
+          <div class="pokerScroll col5" id="pokerScroll5"></div>
+        </div>
+        <div class="pokerPressButton" id="pokerPressButton"></div>
+        <div class="pokerDisplay" id="pokerDisplay">
+          <div class="rhythmFlash" id="rhythmFlash"></div>
+          <div class="tick" id="tick"></div>
+          <div class="cross" id="cross"></div>
+        </div>
+        <div class="ipad" id="ipad">
+          <div class="ipadPuzzle animate-show-dialogue" id="ipadPuzzle">
+            <div class="ipadButtons" id="ipadButtons">
+              <div class="time-sig-up" id="timeSigUp"></div>
+              <div class="time-sig-down" id="timeSigDown"></div>
+              <div class="key-sig-up" id="keySigUp"></div>
+              <div class="key-sig-down" id="keySigDown"></div>
+            </div>
+            <div class="composeButton fontResize" id="composeButton">Compose</div>
+            <div class="timeSignature twoFour" id="twoFour"></div>
+            <div class="timeSignature threeFour" id="threeFour"></div>
+            <div class="timeSignature fourFour" id="fourFour"></div>
+            <div class="timeSignature sixEight" id="sixEight"></div>
+            <div class="keySignature flats-1" id="flat1"></div>
+            <div class="keySignature flats-2" id="flat2"></div>
+            <div class="keySignature flats-3" id="flat3"></div>
+            <div class="keySignature flats-4" id="flat4"></div>
+            <div class="keySignature flats-5" id="flat5"></div>
+            <div class="keySignature flats-6" id="flat6"></div>
+            <div class="keySignature flats-7" id="flat7"></div>
+            <div class="keySignature sharps-1" id="sharp1"></div>
+            <div class="keySignature sharps-2" id="sharp2"></div>
+            <div class="keySignature sharps-3" id="sharp3"></div>
+            <div class="keySignature sharps-4" id="sharp4"></div>
+            <div class="keySignature sharps-5" id="sharp5"></div>
+            <div class="keySignature sharps-6" id="sharp6"></div>
+            <div class="keySignature sharps-7" id="sharp7"></div>
+          </div>
+          <div class="ipadHint" id="ipadHint"></div>
+        </div>
+      </div>
+      <div class="level0" id="level0">
+        <div class="room" id="room"></div>
+      </div>
+    </div>
+  </div>
+  <div class="end-screen" id="endScreen">
+    <div class="video" id="video"><img class="photo-frame" id="photoFrame" src="assets/photobooth-036c4f041562060bd017a3.png" alt="" crossorigin="anonymous">
+      <div class="video-circle" id="videoCircle">
+        <div class="countdown" id="countdown"></div><video class="video-view" id="videoView" crossorigin="anonymous"></video>
+        <canvas id="canvas"></canvas>
+        <div class="output" id="photoOutput"></div>
+      </div>
+    </div>
+    <div class="piano-end-bg" id="endBg"></div>
+    <div class="end-message" id="endMessage"></div><button class="take-photo" id="takePhoto">Take photo!</button>
+    <button class="take-photo" id="retakePhoto" style="display:none">Retake photo</button>
+    <div class="socials" id="socials">
+      <a id="shareFacebook" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a id="shareTwitter" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a id="downloadPhoto" download="twoset-escape.png">
+        <i class="fas fa-download"></i>
+      </a>
+    </div>
+  </div>
+  <script src="js/site.js"></script>
+</body>
+
+</html>
+
+<!--
+  THIS FILE IS A RECONSTRUCTION OF A FILE THAT HAS BEEN ARCHIVED ON THE WAYBACK MACHINE.
+  IT HAS MODIFICATIONS PLACED TO ENSURE THAT IT MAINTAINS FUNCTIONAL.
+-->
